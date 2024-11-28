@@ -5,7 +5,6 @@ from datetime import datetime
 import subprocess
 import time
 
-# Database location
 db_path = "/var/log/user_login_logger/user_login_logger.db"
 
 def create_table():
@@ -51,18 +50,18 @@ def get_user_ip():
 def main():
     """Main loop for continuous logging."""
     print("Starting continuous login monitoring...")
-    logged_users = set()  # To track users who have already been logged
+    logged_users = set()
     while True:
         try:
-            current_users = set(get_user_ip())  # Get current logged-in users
-            new_users = current_users - logged_users  # Identify new logins
+            current_users = set(get_user_ip())
+            new_users = current_users - logged_users
             for username, ip in new_users:
                 log_user(username, ip)
                 print(f"Logged: {username} from {ip}")
-            logged_users = current_users  # Update the tracked users
+            logged_users = current_users 
         except Exception as e:
             print(f"Error in main loop: {e}")
-        time.sleep(10)  # Wait for 10 seconds before polling again
+        time.sleep(10)
 
 if __name__ == "__main__":
     create_table()
