@@ -1,5 +1,5 @@
 # Login_logger
-A logging solution to track user logins on a Linux servers. The system monitors user logins and logs their usernames, IP addresses, and login timestamps into an SQLite3 database. The logger runs as a systemd service for continuous operation.
+A logging solution to track user logins on debian based Linux servers. The system monitors user logins and logs their usernames, IP addresses, and login timestamps into an SQLite3 database. The logger runs as a systemd service for continuous operation.
 
 ## Features
 - Tracks usernames, IP addresses, and login times.
