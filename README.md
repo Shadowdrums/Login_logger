@@ -102,7 +102,7 @@ Start the service:
 sudo systemctl start log_user_data.service
 ```
 ## Usage
-###Check Service Status
+### Check Service Status
 To check if the service is running:
 
 ```bash
