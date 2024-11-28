@@ -12,6 +12,11 @@ A logging solution to track user logins on a Linux servers. The system monitors 
 ### System Requirements
 - Linux system with systemd support.
 - Python 3 installed.
+- sqlite3 installed
+
+```bash
+sudo apt install python3 python3-pip sqlite3
+```
 ### Python Libraries
 - sqlite3 (included with Python 3).
 - subprocess (included with Python 3).
